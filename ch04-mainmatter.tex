@@ -1,0 +1,106 @@
+%% ----------------------------------------------------------------------
+%% START OF FILE
+%% ----------------------------------------------------------------------
+%% 
+%% Filename: ch04-mainmatter.tex
+%% Author: Fred Qi
+%% Created: 2012-12-26 09:20:28(+0800)
+%% 
+%% ----------------------------------------------------------------------
+%%% CHANGE LOG
+%% ----------------------------------------------------------------------
+%% Last-Updated: 2015-04-11 14:11:37(+0300) [by Fred Qi]
+%%     Update #: 19
+%% ----------------------------------------------------------------------
+
+\chapter{论文主体部分}
+\label{cha:mainmatter}
+
+论文主体部分为各章节内容，通常结论一章，相关背景知识一章，具体方法两至四章，结论
+一章。
+
+各章节使用下述命令即可
+\begin{itemize}
+\item \texttt{chapter}
+\item \texttt{section}
+\item \texttt{subsection}
+\item \texttt{subsubsection} (必要的时候可以使用，通常不建议使用）
+\end{itemize}
+
+
+\section{测试插图、表格及其索引}
+\label{sec:testing}
+
+\begin{figure}
+  \centering
+  
+  \caption{插图测试A}
+  \label{fig:test:a}
+\end{figure}
+
+\subsection{随机小节}
+\label{sec:random-tf}
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccccc}
+    \hline
+    Col 1 & Col 2 & Col 3 & Col 4 & Col 5\\
+    \hline
+  \end{tabular}
+  \caption{表格测试A}
+  \label{tab:test}
+\end{table}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccccc}
+    \hline
+  \end{tabular}
+  \caption{表格测试B}
+  \label{tab:test:b}
+\end{table}
+
+
+\begin{figure}
+  \centering
+  
+  \caption{插图测试B}
+  \label{fig:test:b}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  
+  \caption{Testing for English version list of figures with a very long caption.}
+  \label{fig:test:english}
+\end{figure}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{cc}
+    
+  \end{tabular}
+  \caption{A table for testing the English version list of tables with long
+    caption. Try to make this caption longer than one line.}
+  \label{tab:test:english}
+\end{table}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{cc}
+    
+  \end{tabular}
+  \caption[Short table caption]{A table for testing the English version list of
+    tables with long caption.}
+  \label{tab:test:eng-short}
+\end{table}
+
+
+%% ----------------------------------------------------------------------
+%%% END OF FILE 
+%% ----------------------------------------------------------------------

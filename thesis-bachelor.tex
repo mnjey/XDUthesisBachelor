@@ -1,0 +1,88 @@
+%% ----------------------------------------------------------------------
+%% START OF FILE
+%% ----------------------------------------------------------------------
+%%
+%% Filename: thesis-bachelor.tex
+%% Author: Fred Qi
+%% Created: 2008-06-25 11:13:31(+0800)
+%%
+%% ----------------------------------------------------------------------
+%%% CHANGE LOG
+%% ----------------------------------------------------------------------
+%% Last-Updated: 2016-02-09 14:49:44(-0700) [by Fred Qi]
+%%     Update #: 123
+%% ----------------------------------------------------------------------
+%\documentclass{xduthesis}
+\documentclass[bachelor,print]{xduthesis}
+
+% 这里是可能用到的其他宏包，根据自己论文撰写的需要添加
+\usepackage{listings}
+\usepackage{graphicx}
+\lstset{language=TeX, basicstyle=\ttfamily}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+%% 论文前置部分
+%%%%%%%%%%%%%%%
+\frontmatter
+
+% 论文相关信息（封面）
+\classid{000000}
+\studentid{00000000}
+
+\cschool{某某某某学院}
+\ctitle{论文题目}
+\cauthor{作者姓名}
+\cmajor{专业名称}
+\csupervisor{某某某~教授}
+
+% 中英文摘要声明
+\input{abstract}
+
+% 生成论文的封面、声明页、中英文摘要
+\makecover
+
+% 论文目录
+\tableofcontents
+
+%%%%%%%%%%%%%%%
+%% 论文正文
+%%%%%%%%%%%%%%%
+\mainmatter
+
+\input{ch01-intro}
+\input{ch02-options}
+\input{ch03-frontmatter}
+\input{ch04-mainmatter}
+\input{ch05-backmatter}
+\input{ch06-conclusions}
+
+%%%%%%%%%%%%%%%
+%% 论文后置部分
+%%%%%%%%%%%%%%%
+\backmatter
+
+%% 插图索引
+% \listoffigures
+%% 表格索引
+% \listoftables
+
+%% 致谢
+\input{acknowledgments}
+
+% 参考文献
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,refs}
+%\input{ch06-bibliography}
+\input{thebibliography}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% TeX-master: t
+%%% End:
+%% ----------------------------------------------------------------------
+%%% END OF FILE
+%% ---------------------------------------------------------------------- 

@@ -1,0 +1,66 @@
+%% ----------------------------------------------------------------------
+%% START OF FILE
+%% ----------------------------------------------------------------------
+%% 
+%% Filename: abstract.tex
+%% Author: Fred Qi
+%% Created: 2008-06-25 11:34:44(+0800)
+%% 
+%% ----------------------------------------------------------------------
+%%% CHANGE LOG
+%% ----------------------------------------------------------------------
+%% Last-Updated: 2016-02-09 15:17:07(-0700) [by Fred Qi]
+%%     Update #: 62
+%% ----------------------------------------------------------------------
+
+\begin{cabstract}
+  摘要部分使用以下四个环境进行排版，
+  \begin{itemize}
+  \item \texttt{cabstract}
+  \item \texttt{ckeywords}
+  \item \texttt{eabstract}
+  \item \texttt{ekeywords}
+  \end{itemize}
+  分别用于排版\textit{中文摘要}、\textit{中文关键词}、\textit{英文摘
+    要}和\textit{英文关键词}。具体使用示例参见~\texttt{examples/abstract.tex}文件。
+  请注意不同学位论文对于关键词分割符的要求。
+
+  在研究生学位论文中，需要提供中英文的\textit{论文类型}信息，请使用命令
+  \texttt{cthesistype} 和 \texttt{ethesistype} 。
+\end{cabstract}
+
+\begin{ckeywords}
+  关键词一； 关键词二； 关键词三； 关键词四； 关键词五
+\end{ckeywords}
+
+\cthesistype{应用基础技术}
+
+
+\begin{eabstract}
+  The following four environments are designed for typesetting abstracts in both
+  Chinese and English,
+  \begin{itemize}
+  \item \texttt{cabstract}
+  \item \texttt{ckeywords}
+  \item \texttt{eabstract}
+  \item \texttt{ekeywords},
+  \end{itemize}
+  which are for \textit{Chinese abstract}, \textit{Chinese keywords},
+  \textit{English abstract}, and \textit{English keywords}, respectively. An
+  example of using these environments is available in the file
+  \texttt{examples/abstract.tex}。Please note the different requirements on the
+  separation symbol between sequencing keywords.
+
+  In graduate thesis, the information of thesis type is required. Please use the
+  command \texttt{cthesistype} and \texttt{ethesistype} to typeset.
+\end{eabstract}
+
+\begin{ekeywords}
+  Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5
+\end{ekeywords}
+
+\ethesistype{Applied Basic Technology}
+
+%% ----------------------------------------------------------------------
+%%% END OF FILE 
+%% ----------------------------------------------------------------------
