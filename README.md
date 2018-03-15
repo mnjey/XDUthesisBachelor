@@ -8,14 +8,14 @@
 ## 文件说明
 
 模板中的各个文件功能如下：<br>
-  - `thesis-bachelor.tex` 本科学位论文主文档<br>
-  - `abstract.tex` 摘要<br>
-  - `ch01-intro.tex` 模板总体说明//第一章<br>
-  - `ch02-options.tex` 模板选项介绍//第二章<br>
-  - `ch03-frontmatter.tex` 论文前置部分使用说明//第三章<br>
-  - `ch04-mainmatter.tex` 论文主体部分使用说明//第四章<br>
-  - `ch05-backmatter.tex` 论文后置部分使用说明//第五章<br>
-  - `ch06-conclusions.tex` 参考文献排版指南//第六章，结论<br>
-  - 'acknowledgments.tex' 致谢<br>
-  - `thebibliography.tex` 参考文献<br>
-  - `SConstruct` 用于自动编译论文的 scons 脚本<br>
+ - `thesis-bachelor.tex` 本科学位论文主文档<br>
+ - `abstract.tex` 摘要<br>
+ - `ch01-intro.tex` 模板总体说明//第一章<br>
+ - `ch02-options.tex` 模板选项介绍//第二章<br>
+ - `ch03-frontmatter.tex` 论文前置部分使用说明//第三章<br>
+ - `ch04-mainmatter.tex` 论文主体部分使用说明//第四章<br>
+ - `ch05-backmatter.tex` 论文后置部分使用说明//第五章<br>
+ - `ch06-conclusions.tex` 参考文献排版指南//第六章，结论<br>
+ - 'acknowledgments.tex' 致谢<br>
+ - `thebibliography.tex` 参考文献<br>
+ - `SConstruct` 用于自动编译论文的 scons 脚本<br>
