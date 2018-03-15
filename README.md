@@ -19,3 +19,8 @@
  - `acknowledgments.tex` 致谢<br>
  - `thebibliography.tex` 参考文献<br>
  - `SConstruct` 用于自动编译论文的 scons 脚本<br>
+ - `xdulogo.eps` 校徽<br>
+ - `xdubadge.eps` 本科学位论文使用的校名图案<br>
+ - `xduthesis.dtx` 模板文件及说明文档<br>
+ - `xduthesis.ins` 模板安装配置文件<br>
+ - `xduthesis.cls` 模板文件<br>
