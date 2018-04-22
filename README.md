@@ -6,9 +6,13 @@
 任何使用本模板造成的格式错误等问题，均由模板使用者个人承担；<br>
 使用其他TeX发行版本导致编译失败，耽误时间等问题请模板使用者自己解决；<br>
 如编译过程中提示字体缺失，安装相应字体后重新编译即可。<br>
+
+## 模板文件更新说明
+移除Adobe字体支持，默认使用msfont；<br>
+修改了一些显示效果。<br>
+
+
 ## 需要的字体
- - `Adobe Song Std`
- - `Adobe Heiti Std`
  - `Times New Roman`
  - `Arial`
  - `Courier Std`
@@ -34,3 +38,4 @@
  - `xduthesis.dtx` 模板文件及说明文档<br>
  - `xduthesis.ins` 模板安装配置文件<br>
  - `xduthesis.cls` 模板文件<br>
+
