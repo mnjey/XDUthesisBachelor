@@ -76,11 +76,11 @@
 %%\ifxdu@msfonts
 \setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
-\setCJKmonofont{KaiTi_GB2312}
+\setCJKmonofont{KaiTi}
 \setCJKfamilyfont{song}{SimSun}
 \setCJKfamilyfont{hei}{SimHei}
 \setCJKfamilyfont{fs}{FangSong_GB2312}
-\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{kai}{KaiTi}
 %\setCJKfamilyfont{li}{Adobe Kaiti Std}
 \setCJKfamilyfont{li}{LiSu}
 %%\else
