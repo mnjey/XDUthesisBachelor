@@ -18,6 +18,7 @@
  - `Courier Std`
  - `SimSun`
  - `SimHei`
+ - `SimKai`
 
 ## 文件说明
 
