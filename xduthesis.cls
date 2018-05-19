@@ -9,8 +9,40 @@
 %% This is a generated file.
 %% 
 %% Copyright (C) 2008-2014 by Fei Qi <fred.qi@ieee.org>
-
-
+%% 
+%% This file may be distributed and/or modified under the conditions of the LaTeX
+%% Project Public License, either version 1.3a of this license or (at your option)
+%% any later version. The latest version of this license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3a or later is part of all distributions of LaTeX
+%% version 2004/10/01 or later.
+%% 
+%% To produce the documentation run the original source files ending with `.dtx'
+%% through LaTeX.
+%% 
+%% \iffalse
+%%  Local Variables:
+%%  mode: doctex
+%%  TeX-master: t
+%%  End:
+%% \fi
+%% \iffalse meta-comment
+%%
+%% Copyright (C) 2008-2014 by Fred Qi <fred.qi@gmail.com>
+%%
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3a
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in:
+%%
+%% http://www.latex-project.org/lppl.txt
+%%
+%% and version 1.3a or later is part of all distributions of LaTeX
+%% version 2004/10/01 or later.
+%%
+%% \fi
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{xduthesis}
@@ -26,7 +58,7 @@
 \newif\ifxdu@english\xdu@englishfalse
 \newif\ifxdu@mkabstract\xdu@mkabstractfalse
 \newif\ifxdu@print\xdu@printfalse
-\newif\ifxdu@msfonts\xdu@msfontstrue
+\newif\ifxdu@msfonts\xdu@msfontsfalse
 \DeclareOption{bachelor}{\xdu@bachelortrue}
 \DeclareOption{master}{\xdu@mastertrue}
 \DeclareOption{masterpro}{\xdu@masterprotrue}
@@ -35,7 +67,7 @@
 \DeclareOption{english}{\xdu@englishtrue}
 \DeclareOption{print}{\xdu@printtrue}
 \DeclareOption{msfonts}{\xdu@msfontstrue}
-%%\DeclareOption{adobefonts}{\xdu@msfontsfalse}
+\DeclareOption{adobefonts}{\xdu@msfontsfalse}
 \AtEndOfClass{%
   \ifxdu@doctor\relax\else
     \ifxdu@bachelor\relax\else
@@ -73,22 +105,22 @@
 \punctstyle{quanjiao}
 \def\CJK@null{\kern\CJKnullspace\Unicode{48}{7}\kern\CJKnullspace}
 \defaultfontfeatures{Mapping=tex-text} % after fontspec
-%%\ifxdu@msfonts
+\ifxdu@msfonts
 \setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
-\setCJKmonofont{KaiTi}
+\setCJKmonofont{KaiTi_GB2312}
 \setCJKfamilyfont{song}{SimSun}
 \setCJKfamilyfont{hei}{SimHei}
 \setCJKfamilyfont{fs}{FangSong_GB2312}
-\setCJKfamilyfont{kai}{KaiTi}
-%\setCJKfamilyfont{li}{Adobe Kaiti Std}
-\setCJKfamilyfont{li}{LiSu}
-%%\else
-%%\setCJKmainfont{Adobe Song Std}
-%%\setCJKsansfont{Adobe Heiti Std}
-%%\setCJKfamilyfont{song}{Adobe Song Std}
-%%\setCJKfamilyfont{hei}{Adobe Heiti Std}
-%%\fi
+\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{li}{Adobe Kaiti Std}
+\setCJKfamilyfont{you}{LiSu}
+\else
+\setCJKmainfont{Adobe Song Std}
+\setCJKsansfont{Adobe Heiti Std}
+\setCJKfamilyfont{song}{Adobe Song Std}
+\setCJKfamilyfont{hei}{Adobe Heiti Std}
+\fi
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Courier Std}
@@ -267,7 +299,7 @@
   \@makechapterhead{#2}}
 \def\@makechapterhead#1{\noindent%
   \parbox[b]{\textwidth}{\vskip\xdu@chapter@before}%
-  {\centering \sanhao\hei%
+  {\centering \sanhao\song\bfseries%
     \ifnum \c@secnumdepth > \m@ne%
       \@chapapp\hskip1ex%
     \fi%
@@ -282,7 +314,7 @@
   \@afterheading}
 \def\@makeschapterhead#1{\noindent%
   \parbox[b]{\textwidth}{\vskip\xdu@chapter@before}%
-  {\sanhao\hei\centering%
+  {\sanhao\song\bfseries\centering%
    \interlinepenalty\@M
    #1\par\nobreak%
    \vskip\xdu@chapter@after%
@@ -299,9 +331,8 @@
 \titleformat{\section}[block]{\xiaosan}{\thesection}{1ex}{}
 \titlespacing{\section}{0pt}{2ex}{\parskip}
 \fi
-\titleformat{\subsection}[block]{\xiaosi}{\thesubsection}{1ex}{}
-%%\titlespacing{\subsection}{\xdu@CJK@twochars}{\parskip}{\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{0.3\baselineskip}
+\titleformat{\subsection}[block]{\sihao}{\thesubsection}{1ex}{}
+\titlespacing{\subsection}{\xdu@CJK@twochars}{\parskip}{\parskip}
 \renewcommand{\tableofcontents}{%
   % \xdu@clearpage%
   % \phantomsection%
@@ -620,6 +651,7 @@
   \addtolength{\topmargin}{-15pt}
   \setcounter{page}{1}
   \xdu@makeabstract
+  
 }
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter%
                           -\fi\@arabic\c@equation}
@@ -680,6 +712,9 @@
       \endgroup%
     \fi%
   \fi%
+  
+  %\thispagestyle{empty}
+  
   \expandafter \ifx \csname xdu@eabstract\endcsname \relax%
   \else%
     \chapter*{\bfseries\eabstractname}%
