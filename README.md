@@ -5,7 +5,8 @@
 目录内去掉“摘要及目录”的方法：<br>
 第一次编译thesis-bachelor.tex后，用记事本打开编译生成的thesis-bachelor.toc（目录文件），<br>
 将前三行删除并保存，之后重新编译thesis-bachelor.tex即可。<br>
-为了方便PDF的文本复制，本次更新重新加入了Adobe字体支持（Adobe Song Std & Adobe Heiti Std）<br>
+为了方便PDF的文本复制，本次更新重新加入了Adobe字体支持（Adobe Song Std & Adobe Heiti Std）。<br>
+使用中易字体（SimSun & SimHei）复制会产生乱码。<br>
 ***
 目前已满足基本需求，可以正常使用，细节待优化；<br>
 参考自电子工程学院齐飞老师：[xduthesis](https://github.com/fredqi/xduthesis)；<br>
