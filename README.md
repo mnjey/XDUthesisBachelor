@@ -7,7 +7,9 @@
 将前三行删除并保存，之后重新编译thesis-bachelor.tex即可。<br>
 为了方便PDF的文本复制，本次更新重新加入了Adobe字体支持（Adobe Song Std & Adobe Heiti Std），<br>
 使用中易字体（SimSun & SimHei）复制会产生乱码，另一种方法可参考Issues中@wenfengand同学的方法。<br>
-
+摘要页及目录页页码的删除与修改，本人用了偷鸡的方法，使用Adobe Acrobat直接编辑PDF文件修改即可。<br>
+附一个可直接安装使用的Adobe Acrobat（Windows）<br>
+https://pan.baidu.com/s/1Db8AKr3vjhsy2chNsYPi5A password：dbca <br>
 ***
 目前已满足基本需求，可以正常使用，细节待优化；<br>
 参考自电子工程学院齐飞老师：[xduthesis](https://github.com/fredqi/xduthesis)；<br>
