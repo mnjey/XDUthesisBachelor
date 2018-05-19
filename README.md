@@ -1,11 +1,11 @@
 # 西电本科生学位论文LaTeX模板
 ***
-2018.05.20
-更新了封面题目的字体字号与诚信声明书页
-目录内去掉“摘要及目录”的方法：
-第一次编译thesis-bachelor.tex后，用记事本打开编译生成的thesis-bachelor.toc（目录文件），
-将前三行删除并保存，之后重新编译thesis-bachelor.tex即可。
-为了方便PDF的文本复制，本次更新重新加入了Adobe字体支持（Adobe Song Std & Adobe Heiti Std）
+2018.05.20<br>
+更新了封面题目的字体字号与诚信声明书页<br>
+目录内去掉“摘要及目录”的方法：<br>
+第一次编译thesis-bachelor.tex后，用记事本打开编译生成的thesis-bachelor.toc（目录文件），<br>
+将前三行删除并保存，之后重新编译thesis-bachelor.tex即可。<br>
+为了方便PDF的文本复制，本次更新重新加入了Adobe字体支持（Adobe Song Std & Adobe Heiti Std）<br>
 ***
 目前已满足基本需求，可以正常使用，细节待优化；<br>
 参考自电子工程学院齐飞老师：[xduthesis](https://github.com/fredqi/xduthesis)；<br>
