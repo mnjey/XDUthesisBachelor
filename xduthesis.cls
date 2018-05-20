@@ -4,49 +4,17 @@
 %%
 %% The original source files were:
 %%
-%% xduthesis.dtx  (with options: `cls')
+%% xduthesis.dtx  (with options: `class')
+%% ---------:| ---------------------------------------------------------------
+%% xduthesis:| XeLaTeX template for writing Xidian University Thesis
+%%    Author:| Fei Qi
+%%    E-mail:| fred.qi@ieee.org
+%%   License:| Released under the LaTeX Project Public License v1.3c or later
+%%       See:| http://www.latex-project.org/lppl.txt
 %% 
-%% This is a generated file.
-%% 
-%% Copyright (C) 2008-2014 by Fei Qi <fred.qi@ieee.org>
-%% 
-%% This file may be distributed and/or modified under the conditions of the LaTeX
-%% Project Public License, either version 1.3a of this license or (at your option)
-%% any later version. The latest version of this license is in:
-%% 
-%% http://www.latex-project.org/lppl.txt
-%% 
-%% and version 1.3a or later is part of all distributions of LaTeX
-%% version 2004/10/01 or later.
-%% 
-%% To produce the documentation run the original source files ending with `.dtx'
-%% through LaTeX.
-%% 
-%% \iffalse
-%%  Local Variables:
-%%  mode: doctex
-%%  TeX-master: t
-%%  End:
-%% \fi
-%% \iffalse meta-comment
-%%
-%% Copyright (C) 2008-2014 by Fred Qi <fred.qi@gmail.com>
-%%
-%% This file may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3a
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in:
-%%
-%% http://www.latex-project.org/lppl.txt
-%%
-%% and version 1.3a or later is part of all distributions of LaTeX
-%% version 2004/10/01 or later.
-%%
-%% \fi
-
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{xduthesis}
-[2009/06/06 0.2 Xidian University Thesis Template]
+    [2015/09/11 1.0.0 Xidian University Thesis Template]
 \hyphenation{XDU-Thesis}
 \def\xduthesis{$\mathbb{XDU}$-$\mathcal{THESIS}$}
 \def\version{1.0.0}
@@ -109,10 +77,10 @@
 \setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
 \setCJKmonofont{KaiTi_GB2312}
-\setCJKfamilyfont{song}{SimSun}
-\setCJKfamilyfont{hei}{SimHei}
+\setCJKfamilyfont{song}{Adobe Song Std}
+\setCJKfamilyfont{hei}{Adobe Heiti Std}
 \setCJKfamilyfont{fs}{FangSong_GB2312}
-\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{kai}{KaiTi}
 \setCJKfamilyfont{li}{Adobe Kaiti Std}
 \setCJKfamilyfont{you}{LiSu}
 \else
@@ -183,7 +151,7 @@
 \setlength\voffset{3cm-1in}
 \setlength{\topmargin}{-5ex}
 \setlength{\headheight}{3ex}
-\setlength{\headsep}{1ex}
+\setlength{\headsep}{2ex}
 \setlength{\footskip}{5ex}
 \addtolength{\textheight}{-3ex}
 \fi
@@ -262,7 +230,7 @@
 \def\CJKindent{%
   \settowidth\xdu@CJK@twochars{\xdu@CJK@space\xdu@CJK@space}%
   \parindent\xdu@CJK@twochars}
-\setlength{\parskip}{0pt \@plus2pt \@minus0pt}
+\setlength{\parskip}{0pt \@plus0pt \@minus0pt}
 \def\xdu@item@space{%
   \let\itemize\compactitem
   \let\enditemize\endcompactitem
@@ -277,8 +245,8 @@
   \setlength{\xdu@chapter@before}{15mm}
   \setlength{\xdu@chapter@after}{4ex}
 \else
-  \setlength{\xdu@chapter@before}{12ex}
-  \setlength{\xdu@chapter@after}{6ex}
+  \setlength{\xdu@chapter@before}{7ex}
+  \setlength{\xdu@chapter@after}{5ex}
 \fi
 \renewcommand\chapter{%
   \xdu@clearpage%
@@ -299,7 +267,7 @@
   \@makechapterhead{#2}}
 \def\@makechapterhead#1{\noindent%
   \parbox[b]{\textwidth}{\vskip\xdu@chapter@before}%
-  {\centering \sanhao\song\bfseries%
+  {\centering \sanhao\hei%
     \ifnum \c@secnumdepth > \m@ne%
       \@chapapp\hskip1ex%
     \fi%
@@ -314,7 +282,7 @@
   \@afterheading}
 \def\@makeschapterhead#1{\noindent%
   \parbox[b]{\textwidth}{\vskip\xdu@chapter@before}%
-  {\sanhao\song\bfseries\centering%
+  {\sanhao\hei\centering%
    \interlinepenalty\@M
    #1\par\nobreak%
    \vskip\xdu@chapter@after%
@@ -329,10 +297,15 @@
   {\sihao[1.429]\filcenter}}
 \else
 \titleformat{\section}[block]{\xiaosan}{\thesection}{1ex}{}
-\titlespacing{\section}{0pt}{2ex}{\parskip}
+\titlespacing{\section}{0pt}{2ex}{2ex}
 \fi
+\ifxdu@bachelor
+\titleformat{\subsection}[block]{\xiaosi}{\thesubsection}{1ex}{}
+\titlespacing{\subsection}{0em}{2ex}{2ex}
+\else
 \titleformat{\subsection}[block]{\sihao}{\thesubsection}{1ex}{}
-\titlespacing{\subsection}{\xdu@CJK@twochars}{\parskip}{\parskip}
+\titlespacing{\subsection}{\xdu@CJK@twochars}{2ex}{2ex}
+\fi
 \renewcommand{\tableofcontents}{%
   % \xdu@clearpage%
   % \phantomsection%
@@ -394,17 +367,13 @@
     \xdu@urule{32mm}{\xdu@studentid}}
   \begin{center}
     \ifxdu@print
-      \vspace{18mm}
-      \includegraphics[width=77mm]{xdubadge.eps}\par
-      \vspace{15mm}
-      \parbox[t]{\linewidth}{\chuhao\hei\centering\xdu@thesis@str}\par
-      \vspace{15mm}
-      \includegraphics[width=44mm]{xdlogo.eps}\par
-      \vspace{18mm}
-      
-    \else
-      \vspace{132mm}
-    \fi
+    \vspace{18mm}
+    \includegraphics[width=77mm]{xdubadge.eps}\par
+    \vspace{15mm}
+    \parbox[t]{\linewidth}{\chuhao\hei\centering\xdu@thesis@str}\par
+    \vspace{15mm}
+    \includegraphics[width=44mm]{xdlogo.eps}\par
+    \vspace{18mm}\fi
     \begin{minipage}{122mm}
       \flushleft\xiaosan[2.5]\song%
       \xdu@put@prefix{25mm}{\bf\xdu@ctitle@prefix}
@@ -421,21 +390,28 @@
     \end{minipage}
     \vskip-87mm\hskip25mm
     \begin{minipage}{85mm}
-      \xiaosan[2.5]\song\centering\ignorespaces\xdu@ctitle
+      \sanhao\hei\centering\ignorespaces\xdu@ctitle
     \end{minipage}
   \end{center}
 }
 \newcommand{\xdu@titlepage@graduate}{
   \ifxdu@print%
-    \parbox{\textwidth}{\vskip143mm}
-  \else%
     \parbox{\textwidth}{\vskip35mm}
     \begin{center}
-      \includegraphics[width=77mm]{xdubadge-gr}\par
+      \includegraphics[width=77mm]{xdubadge.eps}\par
       \vskip15mm
       \parbox[t]{\linewidth}{\chuhao\hei\centering\xdu@thesis@str}\par
       \vskip15mm
-      \includegraphics[width=44mm]{xdlogo}\par
+      \includegraphics[width=44mm]{xdlogo.eps}\par
+    \end{center}
+  \else%
+    \parbox{\textwidth}{\vskip35mm}
+    \begin{center}
+      \includegraphics[width=77mm]{xdubadge.eps}\par
+      \vskip15mm
+      \parbox[t]{\linewidth}{\chuhao\hei\centering\xdu@thesis@str}\par
+      \vskip15mm
+      \includegraphics[width=44mm]{xdlogo.eps}\par
     \end{center}
   \fi
   \vskip44mm\noindent
@@ -612,19 +588,21 @@
 }
 \def\xdu@make@declaration{%
   \song\xiaosi[1.5]
-  {\centering\bfseries\ifxdu@bachelor\sanhao\else\sihao[1.6]\fi%
-    \xdu@xidian@str\par\xdu@declaration@title\par}
+  {\centering\bfseries\ifxdu@bachelor\bf\song\yihao\else\bf\song\yihao\fi%
+    \xdu@declaration@title\par}
   \vskip4ex\xdu@declaration@str\vskip3ex
-  \xdu@put@prefix{5em}{\xdu@author@presig}\underline{\hskip30mm}\hskip25mm
+  \xdu@put@prefix{5em}{\xdu@author@presig}\underline{\hskip32mm}\hskip25.46mm
   \ifxdu@bachelor
-    \xdu@put@prefix{2em}{\xdu@date@presig}\underline{\hskip30mm}\par
+    \xdu@put@prefix{3em}{\xdu@date@presig}\par
+    \xdu@put@prefix{7em}{\xdu@supervisor@presig}\underline{\hskip24mm}\hskip25mm
+\xdu@put@prefix{3em}{\xdu@date@presig}
   \else
     \xdu@put@prefix{5em}{\xdu@date@presig}\underline{\hskip30mm}\par
   \fi
   \vskip16ex
   \ifxdu@bachelor\relax\else
   {\centering\bfseries\ifxdu@bachelor\sanhao\else\sihao[1.6]\fi%
-    \xdu@xidian@str\par\xdu@authorization@title\par}
+    \xdu@authorization@title\par}
   \vskip4ex\xdu@authorization@str\par\vskip3ex
   \xdu@put@prefix{5em}{\xdu@author@presig}\underline{\hskip30mm}\hskip25mm
   \xdu@put@prefix{5em}{\xdu@supervisor@presig}\underline{\hskip30mm}\par
@@ -651,7 +629,7 @@
   \addtolength{\topmargin}{-15pt}
   \setcounter{page}{1}
   \xdu@makeabstract
-  
+
 }
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter%
                           -\fi\@arabic\c@equation}
@@ -668,8 +646,8 @@
               labelsep=xdu@sep,
               font=xdu@capfont,
               justification=centering}
-\captionsetup[table]{position=top, belowskip={12bp-\intextsep}, aboveskip=3bp}
-\captionsetup[figure]{position=bottom, belowskip={12bp-\intextsep}, aboveskip=3bp}
+\captionsetup[table]{position=top, belowskip={1pc-\intextsep}, aboveskip=1pc}
+\captionsetup[figure]{position=bottom, belowskip={1pc-\intextsep}, aboveskip=1pc}
 \captionsetup[subfloat]{font=xdu@capfont,captionskip=6bp,%
                         nearskip=6bp,farskip=0bp,topadjust=0bp}
 \renewenvironment{table}{%
@@ -712,9 +690,6 @@
       \endgroup%
     \fi%
   \fi%
-  
-  %\thispagestyle{empty}
-  
   \expandafter \ifx \csname xdu@eabstract\endcsname \relax%
   \else%
     \chapter*{\bfseries\eabstractname}%
@@ -809,6 +784,24 @@
 \AtEndOfClass{\input{xduthesis.cfg}}%
 \AtBeginDocument{\CJKindent}
 \AtEndOfClass{\sloppy\xdu@item@space}
-\endinput
+
+%% 
+%% Copyright (C) 2008-2016 by Fei Qi <fred.qi@ieee.org>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Fei Qi.
+%% 
+%% This work consists of the file xduthesis.dtx and a Makefile.
+%% Running "make" generates the derived files xduthesis.pdf and xduthesis.cls.
+%% Running "make inst" installs the files in the user's TeX tree.
+%% Running "make install" installs the files in the local TeX tree.
+%% 
 %%
 %% End of file `xduthesis.cls'.
