@@ -91,7 +91,7 @@
 \fi
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
-\setmonofont{Courier Std}
+\setmonofont{Courier New}
 \RequirePackage{xunicode,metalogo}
 \renewcommand\frontmatter{%
   \xdu@clearpage%
