@@ -20,7 +20,6 @@ https://pan.baidu.com/s/1Db8AKr3vjhsy2chNsYPi5A password：dbca <br>
 如编译过程中提示字体缺失，安装相应字体后重新编译即可。<br>
 
 ## 模板文件（xduthesis.cls)更新说明
-移除Adobe字体支持，默认使用msfont；<br>
 修改了一些显示效果。<br>
 
 
